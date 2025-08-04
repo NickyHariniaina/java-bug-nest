@@ -3,10 +3,19 @@ package com.java_bug_nest.employee_management;
 public abstract class Employee {
   protected int employeeId;
   protected String employeeName;
+  private static int lastEmployeeId = 0;
 
   protected Employee(int employeeId, String employeeName) {
     this.employeeId = employeeId;
     this.employeeName = employeeName;
+    lastEmployeeId = employeeId;
+    lastEmployeeId++;
+  }
+
+  protected Employee(String employeeName) {
+    this.employeeName = employeeName;
+    this.employeeId = lastEmployeeId;
+    lastEmployeeId++;
   }
 
   public abstract double calculatePay();

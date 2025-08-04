@@ -2,17 +2,7 @@ package com.java_bug_nest.employee_management;
 
 import java.util.ArrayList;
 
-/**
- * TODO : a department is a collection of employees. It has a name and a set of
- * employees in it.
- */
 public class Department {
-  /**
-   *
-   * TODO : for our HR officer, give a function to show all details about
-   * employees, including
-   * their pay.
-   */
   private String departmentName;
   private ArrayList<Employee> employeesList;
 
