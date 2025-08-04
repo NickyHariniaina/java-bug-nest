@@ -1,14 +1,11 @@
 package com.java_bug_nest.employee_management;
 
-public class PartTimeEmployee {
-  public int employeeId;
-  public String name;
+public class PartTimeEmployee extends Employee {
   public double hoursWorked;
   public double hourlyRate;
 
-  public PartTimeEmployee(int employeeId, String name, double hoursWorked, double hourlyRate) {
-    this.employeeId = employeeId;
-    this.name = name;
+  public PartTimeEmployee(int employeeId, String employeeName, double hoursWorked, double hourlyRate) {
+    super(employeeId, employeeName);
     this.hoursWorked = hoursWorked;
     this.hourlyRate = hourlyRate;
   }
