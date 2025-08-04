@@ -12,11 +12,10 @@ public class TestCases {
   public static void main(String[] args) {
     FullTimeEmployee koto = TestCases.fullTimeEmployeeKoto();
     PartTimeEmployee lita = TestCases.partTimeEmployeeLita();
+    Department dev = new Department("Backend");
 
-    //
-    // TODO : fix the string format of both full time and part time employees
-    // NOTE : do not show sensitive data such as hourlyRate or monthlySalary here
-    System.out.println("Details about Koto " + koto);
-    System.out.println("Details about Lita " + lita);
+    dev.addNewEmployee(koto);
+    dev.addNewEmployee(lita);
+    System.out.println(dev.showAllEmployeesAbout());
   }
 }

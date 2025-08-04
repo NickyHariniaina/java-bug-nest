@@ -18,4 +18,15 @@ public class FullTimeEmployee extends Employee {
     return "FullTimeEmployee [employeeId=" + employeeId + ", employeeName=" + employeeName + "]";
   }
 
+  @Override
+  public String showSensitiveInfo(Department department) {
+    String info = "";
+    if (department.employeeExist(this)) {
+      info += this.toString();
+      info += " -  monthlySalary= " + this.monthlySalary;
+    } else {
+      info += this.toString();
+    }
+    return info;
+  }
 }

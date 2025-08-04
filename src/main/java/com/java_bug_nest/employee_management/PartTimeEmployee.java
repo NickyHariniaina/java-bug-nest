@@ -20,4 +20,15 @@ public class PartTimeEmployee extends Employee {
         + employeeName + "]";
   }
 
+  @Override
+  public String showSensitiveInfo(Department department) {
+    String info = "";
+    if (department.employeeExist(this)) {
+      info += this.toString();
+      info += " -  hourlyRate= " + this.hourlyRate;
+    } else {
+      info += this.toString();
+    }
+    return info;
+  }
 }
