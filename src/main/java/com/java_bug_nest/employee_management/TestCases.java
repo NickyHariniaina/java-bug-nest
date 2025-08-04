@@ -13,9 +13,6 @@ public class TestCases {
     FullTimeEmployee koto = TestCases.fullTimeEmployeeKoto();
     PartTimeEmployee lita = TestCases.partTimeEmployeeLita();
 
-    // // TODO : do not allow incoherent changes on salaries (applies to full time
-    // // employees too)
-    // lita.hourlyRate = -10_000_000;
     //
     // // TODO : fix the string format of both full time and part time employees
     // // NOTE : do not show sensitive data such as hourlyRate or monthlySalary here
