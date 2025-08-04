@@ -12,6 +12,10 @@ public class Department {
     this.employeesList = new ArrayList<>();
   }
 
+  public ArrayList<Employee> getEmployeesList() {
+    return employeesList;
+  }
+
   public String getDepartmentName() {
     return departmentName;
   }
