@@ -1,18 +1,47 @@
 package com.java_bug_nest.employee_management;
 
-/**
- * TODO : a department is a collection of employees. It has a name and a set of
- * employees in it.
- */
+import java.util.ArrayList;
+
 public class Department {
-  /**
-   * TODO : Employees should never ever be duplicated in a single department.
-   * Please check if it already exists in the department before inserting if need
-   * be. Duplicate
-   * here means : their employee id and name are the same.
-   *
-   * TODO : for our HR officer, give a function to show all details about
-   * employees, including
-   * their pay.
-   */
+  private String departmentName;
+
+  private ArrayList<Employee> employeesList;
+
+  public Department(String departmentName) {
+    this.departmentName = departmentName;
+    this.employeesList = new ArrayList<>();
+  }
+
+  public String getDepartmentName() {
+    return departmentName;
+  }
+
+  public boolean addNewEmployee(Employee newEmployee) {
+    if (employeeExist(newEmployee)) {
+      return false;
+    }
+    this.employeesList.add(newEmployee);
+    return true;
+  }
+
+  public boolean employeeExist(Employee employee) {
+    for (Employee e : this.employeesList) {
+      if (e.equals(employee)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  public String showAllEmployeesAbout() {
+    String info = "Employees information: \n";
+    if (this.employeesList.size() == 0) {
+      return "There are no employees here.";
+    }
+    for (Employee e : this.employeesList) {
+      info += e.showSensitiveInfo(this);
+      info += "\n";
+    }
+    return info;
+  }
 }
