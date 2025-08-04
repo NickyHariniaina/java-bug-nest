@@ -5,6 +5,9 @@ public abstract class Employee {
   protected String employeeName;
   private static int lastEmployeeId = 0;
 
+  // FIXME:
+  // - It doensn't prevent from duplicated ID.
+
   protected Employee(int employeeId, String employeeName) {
     this.employeeId = employeeId;
     this.employeeName = employeeName;
@@ -19,6 +22,8 @@ public abstract class Employee {
   }
 
   public abstract double calculatePay();
+
+  public abstract double calculateTaxe();
 
   @Override
   public int hashCode() {

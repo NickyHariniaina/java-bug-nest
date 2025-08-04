@@ -16,6 +16,7 @@ public class PartTimeEmployee extends Employee {
     this.hourlyRate = hourlyRate;
   }
 
+  @Override
   public double calculatePay() {
     return hoursWorked * hourlyRate;
   }
@@ -36,5 +37,10 @@ public class PartTimeEmployee extends Employee {
       info += this.toString();
     }
     return info;
+  }
+
+  @Override
+  public double calculateTaxe() {
+    return 0.15 * this.hoursWorked * this.hourlyRate;
   }
 }

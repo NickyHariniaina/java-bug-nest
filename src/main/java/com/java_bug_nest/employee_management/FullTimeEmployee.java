@@ -34,4 +34,9 @@ public class FullTimeEmployee extends Employee {
     }
     return info;
   }
+
+  @Override
+  public double calculateTaxe() {
+    return (20 * this.monthlySalary) / 100;
+  }
 }

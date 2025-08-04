@@ -4,11 +4,16 @@ import java.util.ArrayList;
 
 public class Department {
   private String departmentName;
+
   private ArrayList<Employee> employeesList;
 
   public Department(String departmentName) {
     this.departmentName = departmentName;
     this.employeesList = new ArrayList<>();
+  }
+
+  public String getDepartmentName() {
+    return departmentName;
   }
 
   public boolean addNewEmployee(Employee newEmployee) {
